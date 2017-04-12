@@ -20,7 +20,7 @@ class URLItem {
   init(dict: [String: Any]) {
     self.title = ""
     
-    let urlString = dict["url"] as! String
+    let urlString = dict["rawurl"] as! String
     self.url = URL(string: urlString)!
   }
 }
