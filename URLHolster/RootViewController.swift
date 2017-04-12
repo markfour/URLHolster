@@ -29,7 +29,7 @@ class RootViewController: UIViewController {
   func getURL() {
     let url = URL(string: "http://localhost:3000/urlitems.json")
     let task = URLSession.shared.dataTask(with: url!) { (data, respons, error) in
-      print(String(describing: data))
+      print(String(bytes: data!, encoding: .utf8))
     }
     task.resume()
   }
