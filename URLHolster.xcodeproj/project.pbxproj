@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2043FBAB1E502DA5004BFCCB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043FBAA1E502DA5004BFCCB /* RootViewController.swift */; };
+		2043FBAD1E502EB5004BFCCB /* URLItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043FBAC1E502EB5004BFCCB /* URLItem.swift */; };
+		204F19D71E48B1700018910F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F19D61E48B1700018910F /* AppDelegate.swift */; };
+		204F19DC1E48B1700018910F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204F19DA1E48B1700018910F /* Main.storyboard */; };
+		204F19DE1E48B1700018910F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204F19DD1E48B1700018910F /* Assets.xcassets */; };
+		204F19E11E48B1700018910F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204F19DF1E48B1700018910F /* LaunchScreen.storyboard */; };
+		204F19EC1E48B1700018910F /* URLHolsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F19EB1E48B1700018910F /* URLHolsterTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		204F19E81E48B1700018910F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 204F19CB1E48B16E0018910F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 204F19D21E48B16E0018910F;
+			remoteInfo = URLHolster;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2043FBAA1E502DA5004BFCCB /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		2043FBAC1E502EB5004BFCCB /* URLItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLItem.swift; sourceTree = "<group>"; };
+		204F19D31E48B1700018910F /* URLHolster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLHolster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		204F19D61E48B1700018910F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		204F19DB1E48B1700018910F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		204F19DD1E48B1700018910F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		204F19E01E48B1700018910F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		204F19E21E48B1700018910F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		204F19E71E48B1700018910F /* URLHolsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URLHolsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		204F19EB1E48B1700018910F /* URLHolsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHolsterTests.swift; sourceTree = "<group>"; };
+		204F19ED1E48B1700018910F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		204F19D01E48B16E0018910F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		204F19E41E48B1700018910F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		204F19CA1E48B16E0018910F = {
+			isa = PBXGroup;
+			children = (
+				204F19D51E48B1700018910F /* URLHolster */,
+				204F19EA1E48B1700018910F /* URLHolsterTests */,
+				204F19D41E48B1700018910F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		204F19D41E48B1700018910F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				204F19D31E48B1700018910F /* URLHolster.app */,
+				204F19E71E48B1700018910F /* URLHolsterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		204F19D51E48B1700018910F /* URLHolster */ = {
+			isa = PBXGroup;
+			children = (
+				204F19D61E48B1700018910F /* AppDelegate.swift */,
+				204F19DD1E48B1700018910F /* Assets.xcassets */,
+				204F19E21E48B1700018910F /* Info.plist */,
+				204F19DF1E48B1700018910F /* LaunchScreen.storyboard */,
+				204F19DA1E48B1700018910F /* Main.storyboard */,
+				2043FBAA1E502DA5004BFCCB /* RootViewController.swift */,
+				2043FBAC1E502EB5004BFCCB /* URLItem.swift */,
+			);
+			path = URLHolster;
+			sourceTree = "<group>";
+		};
+		204F19EA1E48B1700018910F /* URLHolsterTests */ = {
+			isa = PBXGroup;
+			children = (
+				204F19EB1E48B1700018910F /* URLHolsterTests.swift */,
+				204F19ED1E48B1700018910F /* Info.plist */,
+			);
+			path = URLHolsterTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		204F19D21E48B16E0018910F /* URLHolster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 204F19F01E48B1700018910F /* Build configuration list for PBXNativeTarget "URLHolster" */;
+			buildPhases = (
+				204F19CF1E48B16E0018910F /* Sources */,
+				204F19D01E48B16E0018910F /* Frameworks */,
+				204F19D11E48B16E0018910F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = URLHolster;
+			productName = URLHolster;
+			productReference = 204F19D31E48B1700018910F /* URLHolster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		204F19E61E48B1700018910F /* URLHolsterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 204F19F31E48B1700018910F /* Build configuration list for PBXNativeTarget "URLHolsterTests" */;
+			buildPhases = (
+				204F19E31E48B1700018910F /* Sources */,
+				204F19E41E48B1700018910F /* Frameworks */,
+				204F19E51E48B1700018910F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				204F19E91E48B1700018910F /* PBXTargetDependency */,
+			);
+			name = URLHolsterTests;
+			productName = URLHolsterTests;
+			productReference = 204F19E71E48B1700018910F /* URLHolsterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		204F19CB1E48B16E0018910F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "kazumi hayashida";
+				TargetAttributes = {
+					204F19D21E48B16E0018910F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QC7RJ22359;
+						ProvisioningStyle = Automatic;
+					};
+					204F19E61E48B1700018910F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QC7RJ22359;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 204F19D21E48B16E0018910F;
+					};
+				};
+			};
+			buildConfigurationList = 204F19CE1E48B16E0018910F /* Build configuration list for PBXProject "URLHolster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 204F19CA1E48B16E0018910F;
+			productRefGroup = 204F19D41E48B1700018910F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				204F19D21E48B16E0018910F /* URLHolster */,
+				204F19E61E48B1700018910F /* URLHolsterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		204F19D11E48B16E0018910F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				204F19E11E48B1700018910F /* LaunchScreen.storyboard in Resources */,
+				204F19DE1E48B1700018910F /* Assets.xcassets in Resources */,
+				204F19DC1E48B1700018910F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		204F19E51E48B1700018910F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		204F19CF1E48B16E0018910F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				204F19D71E48B1700018910F /* AppDelegate.swift in Sources */,
+				2043FBAD1E502EB5004BFCCB /* URLItem.swift in Sources */,
+				2043FBAB1E502DA5004BFCCB /* RootViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		204F19E31E48B1700018910F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				204F19EC1E48B1700018910F /* URLHolsterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		204F19E91E48B1700018910F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 204F19D21E48B16E0018910F /* URLHolster */;
+			targetProxy = 204F19E81E48B1700018910F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		204F19DA1E48B1700018910F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				204F19DB1E48B1700018910F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		204F19DF1E48B1700018910F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				204F19E01E48B1700018910F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		204F19EE1E48B1700018910F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		204F19EF1E48B1700018910F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		204F19F11E48B1700018910F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QC7RJ22359;
+				INFOPLIST_FILE = URLHolster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khstore.URLHolster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		204F19F21E48B1700018910F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QC7RJ22359;
+				INFOPLIST_FILE = URLHolster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khstore.URLHolster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		204F19F41E48B1700018910F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QC7RJ22359;
+				INFOPLIST_FILE = URLHolsterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khstore.URLHolsterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/URLHolster.app/URLHolster";
+			};
+			name = Debug;
+		};
+		204F19F51E48B1700018910F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QC7RJ22359;
+				INFOPLIST_FILE = URLHolsterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khstore.URLHolsterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/URLHolster.app/URLHolster";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		204F19CE1E48B16E0018910F /* Build configuration list for PBXProject "URLHolster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				204F19EE1E48B1700018910F /* Debug */,
+				204F19EF1E48B1700018910F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		204F19F01E48B1700018910F /* Build configuration list for PBXNativeTarget "URLHolster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				204F19F11E48B1700018910F /* Debug */,
+				204F19F21E48B1700018910F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		204F19F31E48B1700018910F /* Build configuration list for PBXNativeTarget "URLHolsterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				204F19F41E48B1700018910F /* Debug */,
+				204F19F51E48B1700018910F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 204F19CB1E48B16E0018910F /* Project object */;
+}
