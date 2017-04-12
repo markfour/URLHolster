@@ -10,7 +10,7 @@ import UIKit
 
 class RootViewController: UIViewController {
   
-  
+  let host = "localhost"
   
   @IBOutlet weak var tableView: UITableView!
   
@@ -23,11 +23,15 @@ class RootViewController: UIViewController {
     let i2 = URLItem(title: "apple", URL: URL(string: "https://www.apple.com/jp")!)
     URLItems.append(i2)
     
-    
+    getURL()
   }
   
   func getURL() {
-    
+    let url = URL(string: "http://localhost:3000/urlitems.json")
+    let task = URLSession.shared.dataTask(with: url!) { (data, respons, error) in
+      print(String(describing: data))
+    }
+    task.resume()
   }
 }
 
