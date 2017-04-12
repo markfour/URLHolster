@@ -10,11 +10,18 @@ import Foundation
 
 class URLItem {
   var title: String
-  var URL: URL
+  var url: URL
   
   init(title: String, URL: URL) {
     self.title = title
-    self.URL = URL
+    self.url = URL
+  }
+  
+  init(dict: [String: Any]) {
+    self.title = ""
+    
+    let urlString = dict["url"] as! String
+    self.url = URL(string: urlString)!
   }
 }
 

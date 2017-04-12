@@ -14,14 +14,14 @@ class RootViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
-  fileprivate var URLItems: [URLItem] = []
+  fileprivate var urlItems: [URLItem] = []
   
   override func viewDidLoad() {
     
     let i1 = URLItem(title: "google", URL: URL(string: "https://www.google.co.jp/")!)
-    URLItems.append(i1)
+    urlItems.append(i1)
     let i2 = URLItem(title: "apple", URL: URL(string: "https://www.apple.com/jp")!)
-    URLItems.append(i2)
+    urlItems.append(i2)
     
     getURL()
   }
@@ -29,7 +29,22 @@ class RootViewController: UIViewController {
   func getURL() {
     let url = URL(string: "http://localhost:3000/urlitems.json")
     let task = URLSession.shared.dataTask(with: url!) { (data, respons, error) in
-      print(String(bytes: data!, encoding: .utf8))
+      guard let data = data else { return }
+      
+      do {
+        let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+        guard let array = json as? NSArray else { return }
+        print(array[0])
+        array.forEach {
+          self.urlItems.append(URLItem(dict: $0 as! [String: Any]))
+        }
+        DispatchQueue.main.async {
+          self.tableView.reloadData()
+        }
+
+      } catch {
+        print("json parse error")
+      }
     }
     task.resume()
   }
@@ -37,15 +52,15 @@ class RootViewController: UIViewController {
 
 extension RootViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return URLItems.count
+    return urlItems.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "")
-    let item = URLItems[indexPath.row]
+    let item = urlItems[indexPath.row]
     
     cell.textLabel?.text = item.title
-    cell.detailTextLabel?.text = item.URL.absoluteString
+    cell.detailTextLabel?.text = item.url.absoluteString
     
     return cell
   }
@@ -54,8 +69,8 @@ extension RootViewController: UITableViewDelegate {
 extension RootViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    let item = URLItems[indexPath.row]
+    let item = urlItems[indexPath.row]
     
-    UIApplication.shared.open(item.URL, options: [:], completionHandler: nil)
+    UIApplication.shared.open(item.url, options: [:], completionHandler: nil)
   }
 }
