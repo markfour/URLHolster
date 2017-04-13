@@ -34,7 +34,6 @@ class RootViewController: UIViewController {
       do {
         let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
         guard let array = json as? NSArray else { return }
-        print(array[0])
         array.forEach {
           self.urlItems.append(URLItem(dict: $0 as! [String: Any]))
         }
