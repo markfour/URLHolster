@@ -18,7 +18,15 @@ class URLItem {
   }
   
   init(dict: [String: Any]) {
-    self.title = ""
+    if let web_title = dict["web_title"] {
+      if let t = web_title as? String {
+        self.title = t
+      } else {
+        self.title = ""
+      }
+    } else {
+      self.title = ""
+    }
     
     let urlString = dict["rawurl"] as! String
     self.url = URL(string: urlString)!

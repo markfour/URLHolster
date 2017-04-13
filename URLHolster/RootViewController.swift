@@ -57,6 +57,7 @@ extension RootViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "")
     let item = urlItems[indexPath.row]
+    print("title \(item.title)")
     
     cell.textLabel?.text = item.title
     cell.detailTextLabel?.text = item.url.absoluteString
