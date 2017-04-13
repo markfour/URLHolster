@@ -33,7 +33,7 @@ class ShareViewController: SLComposeServiceViewController {
         self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
       })
     }
-      }
+  }
   
   override func configurationItems() -> [Any]! {
     // To add configuration options via table cells at the bottom of the sheet, return an array of SLComposeSheetConfigurationItem here.
@@ -42,13 +42,14 @@ class ShareViewController: SLComposeServiceViewController {
   
   func postWith(title: String, url: URL) {
     let urlItem = ["user_id": 1,
-                     "rawurl": url.absoluteString] as [String : Any]
+                   "web_title": title,
+                   "rawurl": url.absoluteString] as [String : Any]
     let paramater = ["urlitem": urlItem] as [String : Any]
     var jsonData: Data?
     do {
       jsonData = try JSONSerialization.data(withJSONObject: paramater, options: .prettyPrinted)
     } catch {
-        print("json parse error")
+      print("json parse error")
     }
     let requestURL = URL(string: "http://localhost:3000/urlitems")
     var request = URLRequest(url: requestURL!)
