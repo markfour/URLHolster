@@ -25,16 +25,13 @@ class ShareViewController: SLComposeServiceViewController {
       // shareExtension で NSURL を取得
       if itemProvider.hasItemConformingToTypeIdentifier(puclicURL) {
         itemProvider.loadItem(forTypeIdentifier: puclicURL, options: nil, completionHandler: { (item, error) in
-          print("item \(item)")
           // NSURLを取得する
           if let url: NSURL = item as? NSURL {
             // ----------
             // 保存処理
             // ----------
             print("URL \(url)")
-//            let sharedDefaults: UserDefaults = UserDefaults(suiteName: self.suiteName)!
-//            sharedDefaults.set(url.absoluteString!, forKey: self.keyName)  // そのページのURL保存
-//            sharedDefaults.synchronize()
+            // TODO ここで URL と時間を Postする
           }
           self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
         })
