@@ -24,9 +24,11 @@ class ShareViewController: SLComposeServiceViewController {
     // shareExtension で URL を取得
     if itemProvider.hasItemConformingToTypeIdentifier(puclicURL) {
       itemProvider.loadItem(forTypeIdentifier: puclicURL, options: nil, completionHandler: { (item, error) in
+        print("title? \(self.contentText)")
+        print("items \(item)")
         // URLを取得する
         if let url: URL = item as? URL {
-          self.post(with: url)
+          self.postWith(title: self.contentText!, url: url)
         }
         self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
       })
@@ -38,7 +40,7 @@ class ShareViewController: SLComposeServiceViewController {
     return []
   }
   
-  func post(with url:URL) {
+  func postWith(title: String, url: URL) {
     let urlItem = ["user_id": 1,
                      "rawurl": url.absoluteString] as [String : Any]
     let paramater = ["urlitem": urlItem] as [String : Any]
