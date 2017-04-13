@@ -96,9 +96,9 @@
 		201BF2E71E9E21E000C9F309 /* Share */ = {
 			isa = PBXGroup;
 			children = (
-				201BF2E81E9E21E000C9F309 /* ShareViewController.swift */,
-				201BF2EA1E9E21E000C9F309 /* MainInterface.storyboard */,
 				201BF2ED1E9E21E000C9F309 /* Info.plist */,
+				201BF2EA1E9E21E000C9F309 /* MainInterface.storyboard */,
+				201BF2E81E9E21E000C9F309 /* ShareViewController.swift */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -106,10 +106,10 @@
 		204F19CA1E48B16E0018910F = {
 			isa = PBXGroup;
 			children = (
+				204F19D41E48B1700018910F /* Products */,
+				201BF2E71E9E21E000C9F309 /* Share */,
 				204F19D51E48B1700018910F /* URLHolster */,
 				204F19EA1E48B1700018910F /* URLHolsterTests */,
-				201BF2E71E9E21E000C9F309 /* Share */,
-				204F19D41E48B1700018910F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
