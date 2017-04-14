@@ -41,9 +41,16 @@ class ShareViewController: SLComposeServiceViewController {
   }
   
   func postWith(title: String, url: URL) {
+    let date = Date()
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd"
+    let dateString = formatter.string(from: date)
+    
     let urlItem = ["user_id": 1,
                    "web_title": title,
-                   "rawurl": url.absoluteString] as [String : Any]
+                   "rawurl": url.absoluteString,
+                   "preserveDate": dateString
+      ] as [String : Any]
     let paramater = ["urlitem": urlItem] as [String : Any]
     var jsonData: Data?
     do {
