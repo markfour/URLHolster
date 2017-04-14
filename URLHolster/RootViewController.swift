@@ -14,14 +14,18 @@ class RootViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
-  fileprivate var urlItems: [URLItem] = []
+  // TODO ArrayよりSetのほうがいいか?
+//  fileprivate var urlItems: [[URLItem]] = []
+  fileprivate var urlItems = [[URLItem]]()
   
   override func viewDidLoad() {
-    
+    for _ in 0..<4 {
+      urlItems.append([URLItem]())
+    }
     let i1 = URLItem(title: "google", URL: URL(string: "https://www.google.co.jp/")!)
-    urlItems.append(i1)
+    //    urlItems.append(i1)
     let i2 = URLItem(title: "apple", URL: URL(string: "https://www.apple.com/jp")!)
-    urlItems.append(i2)
+    //    urlItems.append(i2)
     
     getURL()
   }
@@ -33,16 +37,30 @@ class RootViewController: UIViewController {
       
       do {
         let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+        var _urlItems: [URLItem] = []
         guard let array = json as? NSArray else { return }
         array.forEach {
-          self.urlItems.append(URLItem(dict: $0 as! [String: Any]))
+          _urlItems.append(URLItem(dict: $0 as! [String: Any]))
         }
-//        self.urlItems.sort(by: $0.)
+        _urlItems.sort {$0.preserveDate > $1.preserveDate}
+        _urlItems.forEach {
+          print($0.preserveDate)
+          let calendar = Calendar(identifier: .japanese)
+          if calendar.isDateInToday($0.preserveDate) {
+            self.urlItems[0].append($0)
+          } else if calendar.isDateInYesterday($0.preserveDate) {
+            self.urlItems[1].append($0)
+          } else if calendar.isDateInWeekend($0.preserveDate) {
+            self.urlItems[2].append($0)
+          } else {
+            self.urlItems[3].append($0)
+          }
+        }
         
         DispatchQueue.main.async {
           self.tableView.reloadData()
         }
-
+        
       } catch {
         print("json parse error")
       }
@@ -52,13 +70,32 @@ class RootViewController: UIViewController {
 }
 
 extension RootViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func numberOfSections(in tableView: UITableView) -> Int {
     return urlItems.count
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return urlItems[section].count
+  }
+  
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    switch section {
+    case 0:
+      return "今日"
+    case 1:
+      return "昨日"
+    case 2:
+      return "今週"
+    case 3:
+      return "それ以前"
+    default:
+      return nil
+    }
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "")
-    let item = urlItems[indexPath.row]
+    let item = urlItems[indexPath.section][indexPath.row]
     
     cell.textLabel?.text = item.title
     cell.detailTextLabel?.text = item.url.absoluteString
@@ -70,7 +107,7 @@ extension RootViewController: UITableViewDelegate {
 extension RootViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    let item = urlItems[indexPath.row]
+    let item = urlItems[indexPath.section][indexPath.row]
     
     UIApplication.shared.open(item.url, options: [:], completionHandler: nil)
   }
