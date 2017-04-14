@@ -37,6 +37,8 @@ class RootViewController: UIViewController {
         array.forEach {
           self.urlItems.append(URLItem(dict: $0 as! [String: Any]))
         }
+//        self.urlItems.sort(by: $0.)
+        
         DispatchQueue.main.async {
           self.tableView.reloadData()
         }
@@ -57,7 +59,6 @@ extension RootViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "")
     let item = urlItems[indexPath.row]
-    print("title \(item.title)")
     
     cell.textLabel?.text = item.title
     cell.detailTextLabel?.text = item.url.absoluteString

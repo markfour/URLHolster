@@ -34,7 +34,6 @@ class URLItem {
     self.url = URL(string: urlString)!
     
     if let preserveDate = dict["preserveDate"] {
-      print("preserveDate \(preserveDate)")
       if let dateString = preserveDate as? String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
