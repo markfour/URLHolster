@@ -15,17 +15,12 @@ class RootViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   
   // TODO ArrayよりSetのほうがいいか?
-//  fileprivate var urlItems: [[URLItem]] = []
   fileprivate var urlItems = [[URLItem]]()
   
   override func viewDidLoad() {
     for _ in 0..<4 {
       urlItems.append([URLItem]())
     }
-    let i1 = URLItem(title: "google", URL: URL(string: "https://www.google.co.jp/")!)
-    //    urlItems.append(i1)
-    let i2 = URLItem(title: "apple", URL: URL(string: "https://www.apple.com/jp")!)
-    //    urlItems.append(i2)
     
     getURL()
   }
