@@ -17,6 +17,7 @@
 		204F19DE1E48B1700018910F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204F19DD1E48B1700018910F /* Assets.xcassets */; };
 		204F19E11E48B1700018910F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204F19DF1E48B1700018910F /* LaunchScreen.storyboard */; };
 		204F19EC1E48B1700018910F /* URLHolsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F19EB1E48B1700018910F /* URLHolsterTests.swift */; };
+		20BF5A241EA84F30000678EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204F19DD1E48B1700018910F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BF5A241EA84F30000678EB /* Assets.xcassets in Resources */,
 				201BF2EC1E9E21E000C9F309 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +540,7 @@
 				201BF2F21E9E21E000C9F309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		204F19CE1E48B16E0018910F /* Build configuration list for PBXProject "URLHolster" */ = {
 			isa = XCConfigurationList;
