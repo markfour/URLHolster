@@ -22,6 +22,20 @@ class RootViewController: UIViewController {
       urlItems.append([URLItem]())
     }
     
+
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    print("viewWillAppear")
+    
+    urlItems.removeAll()
+    
+    for _ in 0..<4 {
+      urlItems.append([URLItem]())
+    }
+    
     getURL()
   }
   
@@ -94,7 +108,7 @@ extension RootViewController: UITableViewDelegate {
     
     cell.textLabel?.text = item.title
     cell.detailTextLabel?.text = item.url.absoluteString
-    
+    cell.detailTextLabel?.textColor = UIColor.gray
     return cell
   }
 }
