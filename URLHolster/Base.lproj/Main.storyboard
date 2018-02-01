@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,19 +22,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="48" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nWK-bb-NRR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="j0p-15-JeF"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="hmg-0K-BTd"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sj1-5H-CTb">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cKF-KT-SLu"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Refresh" id="B04-fG-5iw">
+                                        <connections>
+                                            <action selector="refreshButtonAction:" destination="BYZ-38-t0r" id="Cse-PN-xAA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nWK-bb-NRR" secondAttribute="trailing" id="Edf-zR-e8z"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nWK-bb-NRR" secondAttribute="bottom" id="f5B-2v-W8z"/>
+                            <constraint firstItem="sj1-5H-CTb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rv1-4o-ih4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sj1-5H-CTb" secondAttribute="bottom" id="TQp-iF-YDk"/>
                             <constraint firstItem="nWK-bb-NRR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fMf-F1-t2v"/>
+                            <constraint firstItem="sj1-5H-CTb" firstAttribute="top" secondItem="nWK-bb-NRR" secondAttribute="bottom" id="k9F-o0-yod"/>
+                            <constraint firstAttribute="trailing" secondItem="sj1-5H-CTb" secondAttribute="trailing" id="vVn-Tb-hh5"/>
                             <constraint firstItem="nWK-bb-NRR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yNo-xs-hJX"/>
                         </constraints>
                     </view>
@@ -44,6 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

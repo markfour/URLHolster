@@ -21,8 +21,6 @@ class RootViewController: UIViewController {
     for _ in 0..<4 {
       urlItems.append([URLItem]())
     }
-    
-
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -76,6 +74,10 @@ class RootViewController: UIViewController {
     }
     task.resume()
   }
+  
+  @IBAction func refreshButtonAction(_ sender: UIBarButtonItem) {
+    
+  }
 }
 
 extension RootViewController: UITableViewDelegate {
@@ -111,6 +113,8 @@ extension RootViewController: UITableViewDelegate {
     cell.detailTextLabel?.textColor = UIColor.gray
     return cell
   }
+  
+  
 }
 
 extension RootViewController: UITableViewDataSource {
