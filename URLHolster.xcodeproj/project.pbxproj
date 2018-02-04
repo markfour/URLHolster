@@ -18,6 +18,7 @@
 		204F19E11E48B1700018910F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204F19DF1E48B1700018910F /* LaunchScreen.storyboard */; };
 		204F19EC1E48B1700018910F /* URLHolsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F19EB1E48B1700018910F /* URLHolsterTests.swift */; };
 		206E5EBD20231F130028AE75 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E5EBC20231F130028AE75 /* DummyData.swift */; };
+		206E5EBF20274D9F0028AE75 /* URLItemDummyData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 206E5EBE20274D9F0028AE75 /* URLItemDummyData.plist */; };
 		20BF5A241EA84F30000678EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204F19DD1E48B1700018910F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		204F19EB1E48B1700018910F /* URLHolsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHolsterTests.swift; sourceTree = "<group>"; };
 		204F19ED1E48B1700018910F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		206E5EBC20231F130028AE75 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		206E5EBE20274D9F0028AE75 /* URLItemDummyData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = URLItemDummyData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				2043FBAA1E502DA5004BFCCB /* RootViewController.swift */,
 				2043FBAC1E502EB5004BFCCB /* URLItem.swift */,
 				206E5EBC20231F130028AE75 /* DummyData.swift */,
+				206E5EBE20274D9F0028AE75 /* URLItemDummyData.plist */,
 			);
 			path = URLHolster;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206E5EBF20274D9F0028AE75 /* URLItemDummyData.plist in Resources */,
 				204F19E11E48B1700018910F /* LaunchScreen.storyboard in Resources */,
 				204F19DE1E48B1700018910F /* Assets.xcassets in Resources */,
 				204F19DC1E48B1700018910F /* Main.storyboard in Resources */,
