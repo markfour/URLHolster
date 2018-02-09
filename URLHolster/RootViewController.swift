@@ -25,8 +25,6 @@ class RootViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    print("viewWillAppear")
-    
     urlItems.removeAll()
     
     if Dummy.enable() {
