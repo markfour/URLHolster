@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   URLItemDummyData.plist
-   URLHolster
-
-   Created by kazumi hayashida on 2018/02/04.
-   Copyright (c) 2018年 kazumi hayashida. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<array>
+	<dict>
+		<key>title</key>
+		<string>Weblio</string>
+		<key>url</key>
+		<string>https://ejje.weblio.jp/</string>
+		<key>preserveDate</key>
+		<date>2018-01-09T08:23:24Z</date>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Github Markfour</string>
+		<key>url</key>
+		<string>https://github.com/markfour</string>
+		<key>preserveDate</key>
+		<date>2018-02-09T08:23:24Z</date>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Google</string>
+		<key>url</key>
+		<string>https://www.google.co.jp/</string>
+		<key>preserveDate</key>
+		<date>2018-02-09T08:23:24Z</date>
+	</dict>
+</array>
 </plist>
