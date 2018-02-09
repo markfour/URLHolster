@@ -3,25 +3,25 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>title</key>
+		<key>web_title</key>
 		<string>Weblio</string>
-		<key>url</key>
+		<key>rawurl</key>
 		<string>https://ejje.weblio.jp/</string>
 		<key>preserveDate</key>
 		<date>2018-01-09T08:23:24Z</date>
 	</dict>
 	<dict>
-		<key>title</key>
+		<key>web_title</key>
 		<string>Github Markfour</string>
-		<key>url</key>
+		<key>rawurl</key>
 		<string>https://github.com/markfour</string>
 		<key>preserveDate</key>
 		<date>2018-02-09T08:23:24Z</date>
 	</dict>
 	<dict>
-		<key>title</key>
+		<key>web_title</key>
 		<string>Google</string>
-		<key>url</key>
+		<key>rawurl</key>
 		<string>https://www.google.co.jp/</string>
 		<key>preserveDate</key>
 		<date>2018-02-09T08:23:24Z</date>
