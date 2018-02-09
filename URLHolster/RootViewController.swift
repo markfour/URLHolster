@@ -18,9 +18,8 @@ class RootViewController: UIViewController {
   fileprivate var urlItems = [[URLItem]]()
   
   override func viewDidLoad() {
-    for _ in 0..<4 {
-      urlItems.append([URLItem]())
-    }
+    super.viewDidLoad()
+
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -30,14 +29,15 @@ class RootViewController: UIViewController {
     
     urlItems.removeAll()
     
-    for _ in 0..<4 {
-      urlItems.append([URLItem]())
+    if Dummy.enable() {
+      urlItems = [Dummy.fetch()]
+      tableView.reloadData()
+    } else {
+      getURL()
     }
-    
-    getURL()
   }
   
-  func getURL() {
+  private func getURL() {
     let url = URL(string: "http://localhost:3000/urlitems.json")
     let task = URLSession.shared.dataTask(with: url!) { (data, respons, error) in
       guard let data = data else { return }
