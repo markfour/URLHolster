@@ -1,5 +1,5 @@
 //
-//  DummyData.swift
+//  Dummy.swift
 //  URLHolster
 //
 //  Copyright © 2018 kazumi hayashida. All rights reserved.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DummyData {
+class Dummy {
   static let userDefaults = UserDefaults.standard
   
   class func enable() -> Bool {
