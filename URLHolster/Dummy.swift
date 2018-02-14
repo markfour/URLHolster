@@ -9,8 +9,12 @@ import Foundation
 
 class Dummy {
   static let userDefaults = UserDefaults.standard
+  static let forceEnable = true
   
   class func enable() -> Bool {
+    if forceEnable {
+      return true
+    }
     if let enableDummy = ProcessInfo.processInfo.environment["dummy_data"] {
       return enableDummy == "1"
     } else {
