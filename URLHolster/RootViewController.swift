@@ -72,7 +72,7 @@ class RootViewController: UIViewController {
   private func reloadURLItems() {
     urlItems.removeAll()
     
-    for _ in 0..<3 {
+    for _ in 0..<4 {
       urlItems.append([URLItem]())
     }
     
