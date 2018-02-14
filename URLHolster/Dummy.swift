@@ -25,7 +25,7 @@ class Dummy {
   class func didIntialize() -> Bool {
     return userDefaults.bool(forKey: "didInitialize")
   }
-
+  
   class func initializeData() {
     guard let path = Bundle.main.path(forResource: "URLItemDummyData.plist", ofType:nil) else {
       print("error")
@@ -49,7 +49,7 @@ class Dummy {
     
     let dummyDataArray = userDefaults.array(forKey: "dummyData")!
     dummyDataArray.forEach {
-       urlItems.append(URLItem(dict: $0 as! [String: Any]))
+      urlItems.append(URLItem(dict: $0 as! [String: Any]))
     }
     
     return urlItems

@@ -19,28 +19,10 @@ class RootViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    reloadURLItems()
   }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    
-    urlItems.removeAll()
-    
-    for _ in 0..<3 {
-      urlItems.append([URLItem]())
-    }
-    
-    if Dummy.enable() {
-      let urlItems = Dummy.fetch().sorted{$0.preserveDate > $1.preserveDate}
-      urlItems.forEach {
-        self.addUrlItems(urlItem: $0)
-      }
-      tableView.reloadData()
-    } else {
-      getURL()
-    }
-  }
-  
+
   private func getURL() {
     let url = URL(string: "http://localhost:3000/urlitems.json")
     let task = URLSession.shared.dataTask(with: url!) { (data, respons, error) in
@@ -81,9 +63,32 @@ class RootViewController: UIViewController {
       self.urlItems[3].append(urlItem)
     }
   }
+
+  private func initizalieURLItems() {
+    Dummy.initializeData()
+    reloadURLItems()
+  }
+  
+  private func reloadURLItems() {
+    urlItems.removeAll()
+    
+    for _ in 0..<3 {
+      urlItems.append([URLItem]())
+    }
+    
+    if Dummy.enable() {
+      let urlItems = Dummy.fetch().sorted{$0.preserveDate > $1.preserveDate}
+      urlItems.forEach {
+        self.addUrlItems(urlItem: $0)
+      }
+      tableView.reloadData()
+    } else {
+      getURL()
+    }
+  }
   
   @IBAction func refreshButtonAction(_ sender: UIBarButtonItem) {
-    
+    initizalieURLItems()
   }
 }
 
