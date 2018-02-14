@@ -19,13 +19,16 @@ class RootViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
     urlItems.removeAll()
+    
+    for _ in 0..<3 {
+      urlItems.append([URLItem]())
+    }
     
     if Dummy.enable() {
       let urlItems = Dummy.fetch().sorted{$0.preserveDate > $1.preserveDate}
