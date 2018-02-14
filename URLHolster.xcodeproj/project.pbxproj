@@ -133,16 +133,16 @@
 		204F19D51E48B1700018910F /* URLHolster */ = {
 			isa = PBXGroup;
 			children = (
-				204F19D61E48B1700018910F /* AppDelegate.swift */,
-				204F19DD1E48B1700018910F /* Assets.xcassets */,
 				204F19E21E48B1700018910F /* Info.plist */,
-				204F19DF1E48B1700018910F /* LaunchScreen.storyboard */,
-				204F19DA1E48B1700018910F /* Main.storyboard */,
+				206E5EBE20274D9F0028AE75 /* URLItemDummyData.plist */,
+				204F19D61E48B1700018910F /* AppDelegate.swift */,
+				206E5EBC20231F130028AE75 /* Dummy.swift */,
 				2043FBAA1E502DA5004BFCCB /* RootViewController.swift */,
 				2043FBAC1E502EB5004BFCCB /* URLItem.swift */,
-				206E5EBC20231F130028AE75 /* Dummy.swift */,
-				206E5EBE20274D9F0028AE75 /* URLItemDummyData.plist */,
 				208C260A2034817900A23312 /* URLItems.swift */,
+				204F19DD1E48B1700018910F /* Assets.xcassets */,
+				204F19DF1E48B1700018910F /* LaunchScreen.storyboard */,
+				204F19DA1E48B1700018910F /* Main.storyboard */,
 			);
 			path = URLHolster;
 			sourceTree = "<group>";
