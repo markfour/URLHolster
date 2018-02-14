@@ -28,7 +28,10 @@ class RootViewController: UIViewController {
     urlItems.removeAll()
     
     if Dummy.enable() {
-      urlItems = [Dummy.fetch()]
+      let urlItems = Dummy.fetch().sorted{$0.preserveDate > $1.preserveDate}
+      urlItems.forEach {
+        self.addUrlItems(urlItem: $0)
+      }
       tableView.reloadData()
     } else {
       getURL()
@@ -47,19 +50,9 @@ class RootViewController: UIViewController {
         array.forEach {
           _urlItems.append(URLItem(dict: $0 as! [String: Any]))
         }
-        _urlItems.sort {$0.preserveDate > $1.preserveDate}
+        _urlItems.sort{$0.preserveDate > $1.preserveDate}
         _urlItems.forEach {
-          print($0.preserveDate)
-          let calendar = Calendar(identifier: .japanese)
-          if calendar.isDateInToday($0.preserveDate) {
-            self.urlItems[0].append($0)
-          } else if calendar.isDateInYesterday($0.preserveDate) {
-            self.urlItems[1].append($0)
-          } else if calendar.isDateInWeekend($0.preserveDate) {
-            self.urlItems[2].append($0)
-          } else {
-            self.urlItems[3].append($0)
-          }
+          self.addUrlItems(urlItem: $0)
         }
         
         DispatchQueue.main.async {
@@ -71,6 +64,19 @@ class RootViewController: UIViewController {
       }
     }
     task.resume()
+  }
+  
+  private func addUrlItems(urlItem: URLItem) {
+    let calendar = Calendar(identifier: .japanese)
+    if calendar.isDateInToday(urlItem.preserveDate) {
+      self.urlItems[0].append(urlItem)
+    } else if calendar.isDateInYesterday(urlItem.preserveDate) {
+      self.urlItems[1].append(urlItem)
+    } else if calendar.isDateInWeekend(urlItem.preserveDate) {
+      self.urlItems[2].append(urlItem)
+    } else {
+      self.urlItems[3].append(urlItem)
+    }
   }
   
   @IBAction func refreshButtonAction(_ sender: UIBarButtonItem) {
