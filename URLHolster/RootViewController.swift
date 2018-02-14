@@ -14,7 +14,7 @@ class RootViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
-  // TODO ArrayよりSetのほうがいいか?
+  // TODO URLItemContainer に以降s
   fileprivate var urlItems = [[URLItem]]()
   
   override func viewDidLoad() {
