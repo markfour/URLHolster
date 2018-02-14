@@ -19,7 +19,7 @@
 		204F19EC1E48B1700018910F /* URLHolsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F19EB1E48B1700018910F /* URLHolsterTests.swift */; };
 		206E5EBD20231F130028AE75 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E5EBC20231F130028AE75 /* Dummy.swift */; };
 		206E5EBF20274D9F0028AE75 /* URLItemDummyData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 206E5EBE20274D9F0028AE75 /* URLItemDummyData.plist */; };
-		208C260B2034817900A23312 /* URLItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C260A2034817900A23312 /* URLItems.swift */; };
+		208C260B2034817900A23312 /* URLItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C260A2034817900A23312 /* URLItemContainer.swift */; };
 		20BF5A241EA84F30000678EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204F19DD1E48B1700018910F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +72,7 @@
 		204F19ED1E48B1700018910F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		206E5EBC20231F130028AE75 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		206E5EBE20274D9F0028AE75 /* URLItemDummyData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = URLItemDummyData.plist; sourceTree = "<group>"; };
-		208C260A2034817900A23312 /* URLItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLItems.swift; sourceTree = "<group>"; };
+		208C260A2034817900A23312 /* URLItemContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLItemContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,7 @@
 				206E5EBC20231F130028AE75 /* Dummy.swift */,
 				2043FBAA1E502DA5004BFCCB /* RootViewController.swift */,
 				2043FBAC1E502EB5004BFCCB /* URLItem.swift */,
-				208C260A2034817900A23312 /* URLItems.swift */,
+				208C260A2034817900A23312 /* URLItemContainer.swift */,
 				204F19DD1E48B1700018910F /* Assets.xcassets */,
 				204F19DF1E48B1700018910F /* LaunchScreen.storyboard */,
 				204F19DA1E48B1700018910F /* Main.storyboard */,
@@ -308,7 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				206E5EBD20231F130028AE75 /* Dummy.swift in Sources */,
-				208C260B2034817900A23312 /* URLItems.swift in Sources */,
+				208C260B2034817900A23312 /* URLItemContainer.swift in Sources */,
 				204F19D71E48B1700018910F /* AppDelegate.swift in Sources */,
 				2043FBAD1E502EB5004BFCCB /* URLItem.swift in Sources */,
 				2043FBAB1E502DA5004BFCCB /* RootViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  URLItems.swift
+//  URLItemContainer.swift
 //  URLHolster
 //
 //  Created by kazumi hayashida on 2018/02/14.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-class URLItems {
+class URLItemContainer {
   
 }
