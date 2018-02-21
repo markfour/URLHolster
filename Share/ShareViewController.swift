@@ -56,14 +56,28 @@ class ShareViewController: SLComposeServiceViewController {
     } catch {
       print("json parse error")
     }
-    let requestURL = URL(string: "http://localhost:3000/urlitems")
-    var request = URLRequest(url: requestURL!)
-    request.addValue("application/json", forHTTPHeaderField: "Content-type")
-    request.httpMethod = "POST"
-    request.httpBody = jsonData
-    let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-      print("response \(String(describing: response))")
+    
+    if true {
+      // Dummy
+      var dummyData = UserDefaults.init(suiteName: "group.com.khayashida.app")?.array(forKey: "dummyData")
+      let urlItem = ["web_title": paramater["web_title"],
+                     "rawurl": paramater["rawurl"],
+                     "preserveDate": paramater["preserveDate"]]
+      dummyData?.append(urlItem)
+      UserDefaults.init(suiteName: "group.com.khayashida.app")?.set(dummyData, forKey: "dummyData")
     }
-    task.resume()
+    
+    if false {
+      // HTTP
+      let requestURL = URL(string: "http://localhost:3000/urlitems")
+      var request = URLRequest(url: requestURL!)
+      request.addValue("application/json", forHTTPHeaderField: "Content-type")
+      request.httpMethod = "POST"
+      request.httpBody = jsonData
+      let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        print("response \(String(describing: response))")
+      }
+      task.resume()
+    }
   }
 }
