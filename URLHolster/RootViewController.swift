@@ -17,8 +17,8 @@ class RootViewController: UIViewController {
   // TODO URLItemContainer に移行する
   fileprivate var urlItems = [[URLItem]]()
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     
     reloadURLItems()
   }
