@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Action</string>
+	<string>URLHolster</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -22,6 +22,10 @@
 	<string>1</string>
 	<key>NSExtension</key>
 	<dict>
+		<key>NSExtensionActionWantsFullScreenPresentation</key>
+		<true/>
+		<key>NSExtensionPrincipalClass</key>
+		<string>ActionViewController</string>
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>NSExtensionActivationRule</key>
