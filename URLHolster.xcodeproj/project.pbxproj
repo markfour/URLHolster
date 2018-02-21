@@ -91,6 +91,7 @@
 		206E5EBC20231F130028AE75 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		206E5EBE20274D9F0028AE75 /* URLItemDummyData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = URLItemDummyData.plist; sourceTree = "<group>"; };
 		208C260A2034817900A23312 /* URLItemContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLItemContainer.swift; sourceTree = "<group>"; };
+		20E50276203DB38D00FE077E /* Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Share.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +129,7 @@
 		201BF2E71E9E21E000C9F309 /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				20E50276203DB38D00FE077E /* Share.entitlements */,
 				201BF2ED1E9E21E000C9F309 /* Info.plist */,
 				201BF2EA1E9E21E000C9F309 /* MainInterface.storyboard */,
 				201BF2E81E9E21E000C9F309 /* ShareViewController.swift */,
@@ -285,6 +287,11 @@
 						DevelopmentTeam = QC7RJ22359;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					2021B9B1203DA09400A822AF = {
 						CreatedOnToolsVersion = 9.2;
@@ -473,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Share/Share.entitlements;
 				DEVELOPMENT_TEAM = QC7RJ22359;
 				INFOPLIST_FILE = Share/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -489,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Share/Share.entitlements;
 				DEVELOPMENT_TEAM = QC7RJ22359;
 				INFOPLIST_FILE = Share/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -594,7 +603,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos11.2;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -644,7 +653,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos11.2;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
