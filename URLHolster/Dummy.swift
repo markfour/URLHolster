@@ -32,11 +32,20 @@ class Dummy {
       assertionFailure()
       return
     }
-    guard let data = NSArray(contentsOfFile: path) else {
+    guard let fileData = NSArray(contentsOfFile: path) as? [[String: Any?]] else {
       print("error")
       assertionFailure()
       return
     }
+    var data = [[String: Any?]]()
+    fileData.forEach {
+      var urlItem = [String: Any?]()
+      urlItem["web_title"] = $0["web_title"]
+      urlItem["rawurl"] = $0["rawurl"]
+      urlItem["preserveDate"] = $0["preserveDate"]
+      data.append(urlItem)
+    }
+    
     userDefaults.set(data, forKey: "dummyData")
     userDefaults.set(true, forKey: "didInitialize")
   }

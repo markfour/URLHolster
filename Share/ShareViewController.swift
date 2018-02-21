@@ -60,10 +60,10 @@ class ShareViewController: SLComposeServiceViewController {
     if true {
       // Dummy
       var dummyData = UserDefaults.init(suiteName: "group.com.khayashida.app")?.array(forKey: "dummyData")
-      let urlItem = ["web_title": paramater["web_title"],
-                     "rawurl": paramater["rawurl"],
-                     "preserveDate": paramater["preserveDate"]]
-      dummyData?.append(urlItem)
+      let saveUrlItem: [String: Any?] = ["web_title": urlItem["web_title"],
+                                         "rawurl": urlItem["rawurl"],
+                                         "preserveDate": urlItem["preserveDate"]]
+      dummyData?.append(saveUrlItem)
       UserDefaults.init(suiteName: "group.com.khayashida.app")?.set(dummyData, forKey: "dummyData")
     }
     
