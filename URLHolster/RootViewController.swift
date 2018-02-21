@@ -125,8 +125,6 @@ extension RootViewController: UITableViewDelegate {
     cell.detailTextLabel?.textColor = UIColor.gray
     return cell
   }
-  
-  
 }
 
 extension RootViewController: UITableViewDataSource {
