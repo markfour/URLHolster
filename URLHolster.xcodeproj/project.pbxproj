@@ -10,6 +10,9 @@
 		201BF2E91E9E21E000C9F309 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BF2E81E9E21E000C9F309 /* ShareViewController.swift */; };
 		201BF2EC1E9E21E000C9F309 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201BF2EA1E9E21E000C9F309 /* MainInterface.storyboard */; };
 		201BF2F01E9E21E000C9F309 /* Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 201BF2E61E9E21E000C9F309 /* Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2021B9B5203DA09400A822AF /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021B9B4203DA09400A822AF /* ActionViewController.swift */; };
+		2021B9B8203DA09400A822AF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2021B9B6203DA09400A822AF /* MainInterface.storyboard */; };
+		2021B9BC203DA09400A822AF /* Action.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2021B9B2203DA09400A822AF /* Action.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2043FBAB1E502DA5004BFCCB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043FBAA1E502DA5004BFCCB /* RootViewController.swift */; };
 		2043FBAD1E502EB5004BFCCB /* URLItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043FBAC1E502EB5004BFCCB /* URLItem.swift */; };
 		204F19D71E48B1700018910F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F19D61E48B1700018910F /* AppDelegate.swift */; };
@@ -31,6 +34,13 @@
 			remoteGlobalIDString = 201BF2E51E9E21E000C9F309;
 			remoteInfo = Share;
 		};
+		2021B9BA203DA09400A822AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 204F19CB1E48B16E0018910F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2021B9B1203DA09400A822AF;
+			remoteInfo = Action;
+		};
 		204F19E81E48B1700018910F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 204F19CB1E48B16E0018910F /* Project object */;
@@ -47,6 +57,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				2021B9BC203DA09400A822AF /* Action.appex in Embed App Extensions */,
 				201BF2F01E9E21E000C9F309 /* Share.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -59,6 +70,10 @@
 		201BF2E81E9E21E000C9F309 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		201BF2EB1E9E21E000C9F309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		201BF2ED1E9E21E000C9F309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2021B9B2203DA09400A822AF /* Action.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Action.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2021B9B4203DA09400A822AF /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		2021B9B7203DA09400A822AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		2021B9B9203DA09400A822AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2043FBAA1E502DA5004BFCCB /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		2043FBAC1E502EB5004BFCCB /* URLItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLItem.swift; sourceTree = "<group>"; };
 		204F19D31E48B1700018910F /* URLHolster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLHolster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +92,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		201BF2E31E9E21E000C9F309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2021B9AF203DA09400A822AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -110,9 +132,20 @@
 			path = Share;
 			sourceTree = "<group>";
 		};
+		2021B9B3203DA09400A822AF /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				2021B9B4203DA09400A822AF /* ActionViewController.swift */,
+				2021B9B6203DA09400A822AF /* MainInterface.storyboard */,
+				2021B9B9203DA09400A822AF /* Info.plist */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
 		204F19CA1E48B16E0018910F = {
 			isa = PBXGroup;
 			children = (
+				2021B9B3203DA09400A822AF /* Action */,
 				204F19D41E48B1700018910F /* Products */,
 				201BF2E71E9E21E000C9F309 /* Share */,
 				204F19D51E48B1700018910F /* URLHolster */,
@@ -126,6 +159,7 @@
 				204F19D31E48B1700018910F /* URLHolster.app */,
 				204F19E71E48B1700018910F /* URLHolsterTests.xctest */,
 				201BF2E61E9E21E000C9F309 /* Share.appex */,
+				2021B9B2203DA09400A822AF /* Action.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,6 +210,23 @@
 			productReference = 201BF2E61E9E21E000C9F309 /* Share.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		2021B9B1203DA09400A822AF /* Action */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2021B9BF203DA09400A822AF /* Build configuration list for PBXNativeTarget "Action" */;
+			buildPhases = (
+				2021B9AE203DA09400A822AF /* Sources */,
+				2021B9AF203DA09400A822AF /* Frameworks */,
+				2021B9B0203DA09400A822AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Action;
+			productName = Action;
+			productReference = 2021B9B2203DA09400A822AF /* Action.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		204F19D21E48B16E0018910F /* URLHolster */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 204F19F01E48B1700018910F /* Build configuration list for PBXNativeTarget "URLHolster" */;
@@ -189,6 +240,7 @@
 			);
 			dependencies = (
 				201BF2EF1E9E21E000C9F309 /* PBXTargetDependency */,
+				2021B9BB203DA09400A822AF /* PBXTargetDependency */,
 			);
 			name = URLHolster;
 			productName = URLHolster;
@@ -219,7 +271,7 @@
 		204F19CB1E48B16E0018910F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "kazumi hayashida";
 				TargetAttributes = {
@@ -227,6 +279,11 @@
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = QC7RJ22359;
 						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					2021B9B1203DA09400A822AF = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = QC7RJ22359;
 						ProvisioningStyle = Automatic;
 					};
 					204F19D21E48B16E0018910F = {
@@ -260,6 +317,7 @@
 				204F19D21E48B16E0018910F /* URLHolster */,
 				204F19E61E48B1700018910F /* URLHolsterTests */,
 				201BF2E51E9E21E000C9F309 /* Share */,
+				2021B9B1203DA09400A822AF /* Action */,
 			);
 		};
 /* End PBXProject section */
@@ -271,6 +329,14 @@
 			files = (
 				20BF5A241EA84F30000678EB /* Assets.xcassets in Resources */,
 				201BF2EC1E9E21E000C9F309 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2021B9B0203DA09400A822AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2021B9B8203DA09400A822AF /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +369,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2021B9AE203DA09400A822AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2021B9B5203DA09400A822AF /* ActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		204F19CF1E48B16E0018910F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -331,6 +405,11 @@
 			target = 201BF2E51E9E21E000C9F309 /* Share */;
 			targetProxy = 201BF2EE1E9E21E000C9F309 /* PBXContainerItemProxy */;
 		};
+		2021B9BB203DA09400A822AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2021B9B1203DA09400A822AF /* Action */;
+			targetProxy = 2021B9BA203DA09400A822AF /* PBXContainerItemProxy */;
+		};
 		204F19E91E48B1700018910F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 204F19D21E48B16E0018910F /* URLHolster */;
@@ -343,6 +422,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				201BF2EB1E9E21E000C9F309 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		2021B9B6203DA09400A822AF /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2021B9B7203DA09400A822AF /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -395,6 +482,48 @@
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		2021B9BD203DA09400A822AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QC7RJ22359;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Action/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khstore.URLHolster.Action;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2021B9BE203DA09400A822AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QC7RJ22359;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Action/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khstore.URLHolster.Action;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -510,6 +639,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = QC7RJ22359;
 				INFOPLIST_FILE = URLHolster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -525,6 +655,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = QC7RJ22359;
 				INFOPLIST_FILE = URLHolster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -575,6 +706,15 @@
 			buildConfigurations = (
 				201BF2F11E9E21E000C9F309 /* Debug */,
 				201BF2F21E9E21E000C9F309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2021B9BF203DA09400A822AF /* Build configuration list for PBXNativeTarget "Action" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2021B9BD203DA09400A822AF /* Debug */,
+				2021B9BE203DA09400A822AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
