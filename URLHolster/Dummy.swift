@@ -8,7 +8,7 @@
 import Foundation
 
 class Dummy {
-  static let userDefaults = UserDefaults.standard
+  static let userDefaults = UserDefaults.init(suiteName: "group.com.khayashida.app")!
   static let forceEnable = true
   
   class func enable() -> Bool {
