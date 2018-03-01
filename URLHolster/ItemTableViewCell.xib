@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hQG-28-rNm">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hQG-28-rNm" customClass="ItemTableViewCell" customModule="URLHolster" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hQG-28-rNm" id="usq-iM-ip4">
@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8kN-qU-gMV">
-                        <rect key="frame" x="8" y="0.0" width="359" height="59.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="59.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ClariS - Irony (Amidst Remix)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF6-IS-JRS">
-                                <rect key="frame" x="0.0" y="0.0" width="359" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QE9-Hb-m0Z"/>
                                 </constraints>
@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://www.youtube.com/watch?v=t3b5B1E-I-s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbU-OP-vJm">
-                                <rect key="frame" x="0.0" y="40" width="359" height="19.5"/>
+                                <rect key="frame" x="0.0" y="40" width="0.0" height="19.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="qCZ-QK-nkk"/>
                                 </constraints>
@@ -52,6 +52,10 @@
                     <constraint firstAttribute="trailing" secondItem="8kN-qU-gMV" secondAttribute="trailing" constant="8" id="z2f-AE-1zs"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="uF6-IS-JRS" id="skw-9Y-rdV"/>
+                <outlet property="urlLabel" destination="KbU-OP-vJm" id="l0B-cn-3BV"/>
+            </connections>
             <point key="canvasLocation" x="-148.5" y="-39"/>
         </tableViewCell>
     </objects>
