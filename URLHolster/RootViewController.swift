@@ -14,7 +14,6 @@ class RootViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
-  // TODO URLItemContainer に移行する
   fileprivate let urlItemContiner = URLItemContainer()
   
   override func viewWillAppear(_ animated: Bool) {
