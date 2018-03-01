@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="height" constant="44" id="cKF-KT-SLu"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Refresh" id="B04-fG-5iw">
+                                    <barButtonItem title="Initialize" id="B04-fG-5iw">
                                         <connections>
                                             <action selector="refreshButtonAction:" destination="BYZ-38-t0r" id="Cse-PN-xAA"/>
                                         </connections>
