@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		201A7D332048549E00F2E204 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201A7D322048549E00F2E204 /* ItemTableViewCell.xib */; };
 		201BF2E91E9E21E000C9F309 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BF2E81E9E21E000C9F309 /* ShareViewController.swift */; };
 		201BF2EC1E9E21E000C9F309 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201BF2EA1E9E21E000C9F309 /* MainInterface.storyboard */; };
 		201BF2F01E9E21E000C9F309 /* Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 201BF2E61E9E21E000C9F309 /* Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -67,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		201A7D322048549E00F2E204 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 		201BF2E61E9E21E000C9F309 /* Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Share.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		201BF2E81E9E21E000C9F309 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		201BF2EB1E9E21E000C9F309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				204F19DD1E48B1700018910F /* Assets.xcassets */,
 				204F19DF1E48B1700018910F /* LaunchScreen.storyboard */,
 				204F19DA1E48B1700018910F /* Main.storyboard */,
+				201A7D322048549E00F2E204 /* ItemTableViewCell.xib */,
 			);
 			path = URLHolster;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				206E5EBF20274D9F0028AE75 /* URLItemDummyData.plist in Resources */,
 				204F19E11E48B1700018910F /* LaunchScreen.storyboard in Resources */,
 				204F19DE1E48B1700018910F /* Assets.xcassets in Resources */,
+				201A7D332048549E00F2E204 /* ItemTableViewCell.xib in Resources */,
 				204F19DC1E48B1700018910F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
