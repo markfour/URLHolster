@@ -15,7 +15,7 @@ class RootViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   
   // TODO URLItemContainer に移行する
-  fileprivate var urlItems = [[URLItem]]()
+  fileprivate let urlItemContiner = URLItemContainer()
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -37,7 +37,7 @@ class RootViewController: UIViewController {
         }
         _urlItems.sort{$0.preserveDate > $1.preserveDate}
         _urlItems.forEach {
-          self.addUrlItems(urlItem: $0)
+          self.urlItemContiner.addUrlItems(urlItem: $0)
         }
         
         DispatchQueue.main.async {
@@ -50,19 +50,6 @@ class RootViewController: UIViewController {
     }
     task.resume()
   }
-  
-  private func addUrlItems(urlItem: URLItem) {
-    let calendar = Calendar(identifier: .japanese)
-    if calendar.isDateInToday(urlItem.preserveDate) {
-      self.urlItems[0].append(urlItem)
-    } else if calendar.isDateInYesterday(urlItem.preserveDate) {
-      self.urlItems[1].append(urlItem)
-    } else if calendar.isDateInWeekend(urlItem.preserveDate) {
-      self.urlItems[2].append(urlItem)
-    } else {
-      self.urlItems[3].append(urlItem)
-    }
-  }
 
   private func initizalieURLItems() {
     Dummy.initializeData()
@@ -70,16 +57,12 @@ class RootViewController: UIViewController {
   }
   
   private func reloadURLItems() {
-    urlItems.removeAll()
-    
-    for _ in 0..<4 {
-      urlItems.append([URLItem]())
-    }
-    
+    urlItemContiner.initializeUrlItems()
+
     if Dummy.enable() {
       let urlItems = Dummy.fetch().sorted{$0.preserveDate > $1.preserveDate}
       urlItems.forEach {
-        self.addUrlItems(urlItem: $0)
+        self.urlItemContiner.addUrlItems(urlItem: $0)
       }
       tableView.reloadData()
     } else {
@@ -94,11 +77,11 @@ class RootViewController: UIViewController {
 
 extension RootViewController: UITableViewDelegate {
   func numberOfSections(in tableView: UITableView) -> Int {
-    return urlItems.count
+    return urlItemContiner.count
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return urlItems[section].count
+    return urlItemContiner.sectionCount(section: section)
   }
   
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -118,7 +101,7 @@ extension RootViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "")
-    let item = urlItems[indexPath.section][indexPath.row]
+    let item = urlItemContiner.urlItem(section: indexPath.section, row: indexPath.row)
     
     cell.textLabel?.text = item.title
     cell.detailTextLabel?.text = item.url.absoluteString
@@ -130,7 +113,7 @@ extension RootViewController: UITableViewDelegate {
 extension RootViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    let item = urlItems[indexPath.section][indexPath.row]
+    let item = urlItemContiner.urlItem(section: indexPath.section, row: indexPath.row)
     
     UIApplication.shared.open(item.url, options: [:], completionHandler: nil)
   }
