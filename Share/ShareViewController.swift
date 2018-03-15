@@ -11,6 +11,8 @@ import Social
 
 class ShareViewController: SLComposeServiceViewController {
   
+  let isOffline = true
+  
   override func isContentValid() -> Bool {
     return true
   }
@@ -57,7 +59,7 @@ class ShareViewController: SLComposeServiceViewController {
       print("json parse error")
     }
     
-    if true {
+    if isOffline {
       // Dummy
       var dummyData = UserDefaults.init(suiteName: "group.com.khayashida.app")?.array(forKey: "dummyData")
       let saveUrlItem: [String: Any?] = ["web_title": urlItem["web_title"],
@@ -65,9 +67,7 @@ class ShareViewController: SLComposeServiceViewController {
                                          "preserveDate": urlItem["preserveDate"]]
       dummyData?.append(saveUrlItem)
       UserDefaults.init(suiteName: "group.com.khayashida.app")?.set(dummyData, forKey: "dummyData")
-    }
-    
-    if false {
+    } else {
       // HTTP
       let requestURL = URL(string: "http://localhost:3000/urlitems")
       var request = URLRequest(url: requestURL!)
