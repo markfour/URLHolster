@@ -24,9 +24,24 @@ class RootViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    print("viewWillAppear")
     
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(self.enteredForeground(_:)),
+                                           name: NSNotification.Name.UIApplicationWillEnterForeground,
+                                           object: nil)
     reloadURLItems()
+  }
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    
+    NotificationCenter.default.removeObserver(self)
+  }
+  
+  @objc func enteredForeground(_ notification: Notification?) {
+    if (self.isViewLoaded && (self.view.window != nil)) {
+      reloadURLItems()
+    }
   }
   
   private func getURL() {
