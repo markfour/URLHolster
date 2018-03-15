@@ -16,12 +16,20 @@ class RootViewController: UIViewController {
   
   fileprivate let urlItemContiner = URLItemContainer()
   
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    tableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "item")
+  }
+  
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    reloadURLItems()
+    reloadURLItems(
+      
+    )
   }
-
+  
   private func getURL() {
     let url = URL(string: "http://localhost:3000/urlitems.json")
     let task = URLSession.shared.dataTask(with: url!) { (data, respons, error) in
@@ -49,7 +57,7 @@ class RootViewController: UIViewController {
     }
     task.resume()
   }
-
+  
   private func initizalieURLItems() {
     Dummy.initializeData()
     reloadURLItems()
@@ -57,7 +65,7 @@ class RootViewController: UIViewController {
   
   private func reloadURLItems() {
     urlItemContiner.initializeUrlItems()
-
+    
     if Dummy.enable() {
       let urlItems = Dummy.fetch().sorted{$0.preserveDate > $1.preserveDate}
       urlItems.forEach {
@@ -99,12 +107,11 @@ extension RootViewController: UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "")
+    let cell = tableView.dequeueReusableCell(withIdentifier: "item") as! ItemTableViewCell
     let item = urlItemContiner.urlItem(section: indexPath.section, row: indexPath.row)
     
-    cell.textLabel?.text = item.title
-    cell.detailTextLabel?.text = item.url.absoluteString
-    cell.detailTextLabel?.textColor = UIColor.gray
+    cell.title = item.title
+    cell.url = item.url.absoluteString
     return cell
   }
 }
