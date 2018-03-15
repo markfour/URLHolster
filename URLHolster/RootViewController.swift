@@ -20,6 +20,7 @@ class RootViewController: UIViewController {
     super.viewDidLoad()
     
     tableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "item")
+    tableView.rowHeight = 60
   }
   
   override func viewWillAppear(_ animated: Bool) {
