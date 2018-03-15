@@ -107,6 +107,10 @@ extension RootViewController: UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    if urlItemContiner.sectionCount(section: section) == 0 {
+      return nil
+    }
+
     switch section {
     case 0:
       return "今日"
