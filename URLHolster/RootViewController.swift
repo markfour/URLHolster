@@ -115,7 +115,7 @@ extension RootViewController: UITableViewDelegate {
     case 2:
       return "今週"
     case 3:
-      return "それ以前"
+      return "2週間以上前"
     default:
       return nil
     }
