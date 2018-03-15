@@ -19,30 +19,26 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8kN-qU-gMV">
-                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="59.5"/>
+                        <rect key="frame" x="8" y="0.0" width="359" height="59.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ClariS - Irony (Amidst Remix)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF6-IS-JRS">
-                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="40" text="ClariS - Irony (Amidst Remix)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF6-IS-JRS">
+                                <rect key="frame" x="0.0" y="0.0" width="359" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="QE9-Hb-m0Z"/>
+                                    <constraint firstAttribute="height" constant="40" id="svL-ns-bHe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://www.youtube.com/watch?v=t3b5B1E-I-s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbU-OP-vJm">
-                                <rect key="frame" x="0.0" y="40" width="0.0" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="20" text="https://www.youtube.com/watch?v=t3b5B1E-I-s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbU-OP-vJm">
+                                <rect key="frame" x="0.0" y="40" width="359" height="19.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="qCZ-QK-nkk"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="hnp-2K-9No"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="KbU-OP-vJm" firstAttribute="leading" secondItem="8kN-qU-gMV" secondAttribute="leading" id="IVt-dc-J1B"/>
-                            <constraint firstAttribute="trailing" secondItem="KbU-OP-vJm" secondAttribute="trailing" id="ZFC-fl-VYu"/>
-                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
