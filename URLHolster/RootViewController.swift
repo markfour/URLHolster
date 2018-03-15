@@ -24,10 +24,9 @@ class RootViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    print("viewWillAppear")
     
-    reloadURLItems(
-      
-    )
+    reloadURLItems()
   }
   
   private func getURL() {
